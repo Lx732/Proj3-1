@@ -2,9 +2,9 @@
 
 /*
     CIS 162
-    Project 2-4 Forms
+    Project 3-1 
    
-   Style Sheet for Grids used in to  befriend Summer & Benny
+   Style Sheet for Resume/Portfolio Proj 3
    Author: Alexandria Ramos
    Date:   4/23/22
    
@@ -12,7 +12,6 @@
 
 */
 
-/* Rest for Page Body*/
 address, article, aside, blockquote, body, cite,
 div, dl, dt, dd, em, figcaption, figure, footer,
 h1, h2, h3, h4, h5, h6, header, html, img,
@@ -24,95 +23,33 @@ li, main, nav, ol, p, section, span, ul {
  box-sizing: border-box;
 }
 
-html {background-color:mintcream}
 body{
-    background-color: lemonchiffon;
+    background-color: white;
 
     
   font-family: "Trirong", serif;
 
     
-    line-height: 1.8em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    max-width: 960px;
-    min-width: 640px;
+  line-height: 1.8em;
+  display: flex;
+  flex-wrap: wrap;
+    
 }
-
-
-
-
-
-/* Grid Styles for Page Body */
-
-body {
- display: grid;
- grid-template-columns: 2fr 1fr;
- grid-template-areas: "header header"
-                      "intro faq"
-                      "articles faq"
-                      "footer footer";
- grid-column-gap: 5px;
-}
-
-body > header {
- grid-row: 1;
- grid-column: 1/-1;
-}
-
-body > article {grid-area: intro;}
-body > aside {grid-area: faq;}
-body > section {grid-area: articles;}
-body > footer {grid-area: footer;}
-
-
-
-
-
-/* Body Header Styles */
 
 
 
 
 /* Page Header Styles */
-body > header > img {
-   display: block;
-   width: 100%;
-    
-}
 
-body > header > li{
-    width: 20%
-}
 
 header h1 {margin-bottom:0;
 text-align: center;
-background-color: teal}
+background-color: silver}
 
-h1 {color:lightseagreen}
+h1 {color:gray}
 
 
-nav{
-    display: inline-block;
-    width: 100%;
-    
-    margin: 0 auto;
-    
-    text-align: center;
-    
-}
 
-nav ul li {
-    margin-left: auto;
-    margin-right: auto
-        
-}
-
-nav> ul {line-height: 2em;
-list-style-type: none;
-padding-left: 5px;
-}
 /*to fill the color in nav*/
 
 nav li {
@@ -122,19 +59,15 @@ nav li {
 }
 
 nav a {
- text-decoration: none;
-    display: block;
-    text-align: center;
-    background-color: teal;
+    background-color: silver;
     font-size: 1.4em;
     line-height: 1.8em;
-    text-align: center;
       
 }
 
 nav a:hover,
 nav a:active{
-    background-color: azure
+    background-color: gold
 }
 
 /*Links*/
@@ -144,18 +77,7 @@ a:visited{
     color: navy
 }
 
-/*To space out menu by 20 percent*/
-body > header > nav.horizontalNavigation li {
-   width: 25%;
-}
 
-
-/* Horizontal Navigation List Styles */
-
-nav.horizontalNavigation > ul > li {
-   display: block;
-   float: left;
-}
 
 /*Displays link as box*/
 
@@ -168,45 +90,12 @@ nav.horizontalNavigation a {
 }  
 
 
-/* Forms Layout Styles section */
-
-
-form#survey {
- display: flex;
- flex-flow: row wrap;
-}
-
-
-form#survey > fieldset {
- background-color: tan;
- border-radius: 20px;
- flex: 1 1 300px;
- font-size: 0.85em;
- padding: 10px;
- margin: 10px;
-}
-
-
-div.formRow {
- display: flex;
- flex-flow: row wrap;
- margin: 7px 0px;
-}
-
-div.formRow > * {
- flex: 1 1 150px;
-}
-
-
-
-
-
 
 /* Legend Styles */
 
 
 legend {
- background-color: teal;
+ background-color: gold;
  color: white;
  padding: 5px;
 }
@@ -218,66 +107,10 @@ legend {
 /* Text Area Styles */
 
 
-textarea {
- margin-top: 10px;
- height: 100px;
- width: 95%;
-}
-
-
 .text-primary{
     
- color:teal
+ color:black
 }
-
-
-/* Form Button Styles */
-
-
-div#buttons {
- text-align: center;
- width: 100%;
-}
-
-
-input[type='submit'], input[type='reset'] {
- font-size: 1.2em;
- padding: 5px;
- margin: 15px;
-}
-
-
-
-
-
-/* Validation Styles */
-
-
-input:focus, select:focus, textarea:focus {
- background-color: azure;
-}
-
-/* display a light green background and a green
-check mark image when valid data is entered in the custName, custZip,
-custPhone, and custEmail fields:*/
-input#name:focus:valid,
-input#zip:focus:valid,
-input#phone:focus:valid,
-input#mail:focus:valid {
- background-color: lawngreen
-}
-
-
-/*o display a light red background and a red X
-image when invalid data is entered in those same fields:
-*/
-input#name:focus:invalid,
-input#zip:focus:invalid,
-input#phone:focus:invalid,
-input#mail:focus:invalid {
- background-color: lightcoral
-}
-
 
 
 
@@ -306,3 +139,113 @@ div.desc {
 }
 
 
+
+
+
+
+/*Sticky Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
